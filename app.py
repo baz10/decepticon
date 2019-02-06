@@ -56,7 +56,7 @@ def get_message(userMessage):
     if data['result'] == 1:
         return data['response']
     else:
-        print ("Yikes! Something Went Wrong..")
+        return "Yikes! Something Went Wrong.."
 
 
 #uses PyMessenger to send response to user
