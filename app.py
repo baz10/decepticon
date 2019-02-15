@@ -8,7 +8,7 @@ from pymessenger.bot import Bot
 app = Flask(__name__)
 ACCESS_TOKEN = "EAADWjJgyWIABAAwnwRYxBQl3sJZBKh1h0ZBd6NrhfpX0d7ZA2KU7GufYWmtf8Y8MrF4481aBikPQpsajLlzaxbHCY83FpgZAvRCUrv1kRnnOr16OnVssw9kPywBnb0PyTGJybEdOwNQ31gtntchepLF48fM8YE3I1OnyWQW5BwZDZD"#os.environ['ACCESS_TOKEN']
 VERIFY_TOKEN = "decepticon"#os.environ['VERIFY_TOKEN']
-SimsimiKey = "90a9e3ae-527a-4055-86d8-4275ae9ccb69"#os.environ['SimsimiKey']
+SimsimiKey = "b3851289-856c-4547-bd0a-46fb30afa0c5"#os.environ['SimsimiKey']
 bot = Bot(ACCESS_TOKEN) 
 
  
@@ -47,16 +47,16 @@ def verify_fb_token(token_sent):
 
 
 
-#chooses a random message to send to the user
+
 def get_message(userMessage):
     
-    URL = "http://sandbox.api.simsimi.com/request.p?key={}&lc=id&ft=1.0&text={}".format(SimsimiKey,userMessage)
+    URL = "http://sandbox.api.simsimi.com/request.p?key={}&lc=en&ft=1.0&text={}".format(SimsimiKey,userMessage)
     r = requests.get(url = URL)
     data = r.json()
-    if data['result'] == 1:
+    if data['result'] == 100:
         return data['response']
     else:
-        return "Yikes! Something Went Wrong.."
+        return data['msg']
 
 
 #uses PyMessenger to send response to user
