@@ -6,9 +6,9 @@ from flask import Flask, request
 from pymessenger.bot import Bot
  
 app = Flask(__name__)
-ACCESS_TOKEN = "EAADWjJgyWIABAAwnwRYxBQl3sJZBKh1h0ZBd6NrhfpX0d7ZA2KU7GufYWmtf8Y8MrF4481aBikPQpsajLlzaxbHCY83FpgZAvRCUrv1kRnnOr16OnVssw9kPywBnb0PyTGJybEdOwNQ31gtntchepLF48fM8YE3I1OnyWQW5BwZDZD"#os.environ['ACCESS_TOKEN']
-VERIFY_TOKEN = "decepticon"#os.environ['VERIFY_TOKEN']
-SimsimiKey = "b3851289-856c-4547-bd0a-46fb30afa0c5"#os.environ['SimsimiKey']
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
+SimsimiKey = os.environ['SimsimiKey']
 bot = Bot(ACCESS_TOKEN) 
 
  
