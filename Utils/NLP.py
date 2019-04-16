@@ -1,8 +1,8 @@
 import time, string, random, re
-from bad_words import BAD_WORDS
+
+#from bad_words import BAD_WORDS
 from datetime import datetime, timedelta
-from pattern.en import parsetree, singularize
-from pattern.search import search
+from pattern.text import search
 
 # Random response sets
 no_response = ["*scratch my head* :(", "How do I respond to that... :O", "I can be not-so-smart from time to time... :(", "Err... you know I'm not human, right? :O"]
@@ -34,11 +34,11 @@ def isAskingBotInformation(sentence):
 
     return False
 
-def badWords(string):
+'''def badWords(string):
     for word in string.split(" "):
         if word.lower() in BAD_WORDS:
             return True
-    return False
+    return False'''
 
 
 def oneOf(arr):
