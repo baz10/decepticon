@@ -2,7 +2,7 @@ import time, string, random, re
 
 #from bad_words import BAD_WORDS
 from datetime import datetime, timedelta
-from pattern.text import search
+#from pattern.text import search
 
 # Random response sets
 no_response = ["*scratch my head* :(", "How do I respond to that... :O", "I can be not-so-smart from time to time... :(", "Err... you know I'm not human, right? :O"]
